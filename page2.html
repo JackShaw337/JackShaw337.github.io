@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Belgian Chocolate">
+  <meta name="keywords" content="Chocolates, Sweets">
+  <meta name="author" content="Jack Shaw">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel ="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel ="stylesheet" href="css/slideshow.css">
+
+<title>Products</title>
+</head>
+<body>
+
+<div class="header">
+  <h1>Choc O Lat</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+    <a href = "index.html"><li>Home</li></a>
+    <a href = "page2.html"><li>Products</li></a>
+    <a href = "page3.html"><li>Feedback</li></a>
+    <a href = "page4.html"><li>Checkout</li></a>
+    </ul>
+  </div>
+
+  <div class="col-6">
+    <h1>Products</h1>
+    <p>Here is a selection of our products that you can buy.</p>
+
+ <div class="slideshow-container">
+
+ <div class="mySlides fade">
+   <div class="numbertext">1 / 3</div>
+   <img src="images/pexels-photo-209353.jpeg" alt="Tower Of Chocolate"style="width:100%">
+   <div class="text">Tower of Chocolate</div>
+ </div>
+
+ <div class="mySlides fade">
+   <div class="numbertext">2 / 3</div>
+   <img src="images/pexels-photo-461295.jpeg" alt="White Chocolate Cake" style="width:100%">
+   <div class="text">White Chocolate </div>
+ </div>
+
+ <div class="mySlides fade">
+   <div class="numbertext">3 / 3</div>
+   <img src="images/pexels-photo-3081657.jpeg" alt="Cherry Chocolate cake" style="width:90%">
+   <div class="text">Cherry Chocolate Cake</div>
+ </div>
+
+ <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+ <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+ </div>
+ <br>
+
+ <div style="text-align:center">
+   <span class="dot" onclick="currentSlide(1)"></span>
+   <span class="dot" onclick="currentSlide(2)"></span>
+   <span class="dot" onclick="currentSlide(3)"></span>
+ </div>
+
+ <script>
+ var slideIndex = 1;
+ showSlides(slideIndex);
+
+ function plusSlides(n) {
+   showSlides(slideIndex += n);
+ }
+
+ function currentSlide(n) {
+   showSlides(slideIndex = n);
+ }
+
+ function showSlides(n) {
+   var i;
+   var slides = document.getElementsByClassName("mySlides");
+   var dots = document.getElementsByClassName("dot");
+   if (n > slides.length) {slideIndex = 1}
+   if (n < 1) {slideIndex = slides.length}
+   for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+   }
+   for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";
+   dots[slideIndex-1].className += " active";
+ }
+ </script>
+  </div>
+
+  <div class="col-3 right">
+    <div class="aside">
+      <h2>Contact Us</h2>
+      <p>Our Uk number is 01942 782642.</p>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
